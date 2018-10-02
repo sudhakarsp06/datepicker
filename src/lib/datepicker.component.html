@@ -1,0 +1,35 @@
+<div class="suplug-container date-navigation">
+    <div class="navigation-pagination">
+        <div class="left-pagination">
+            <a class="date-navigation" (click)="gotoPrevMonth()" href="javascript:;">
+                <</a>
+        </div>
+        <div class="right-pagination">
+            <a class="date-navigation" (click)="gotoNextMonth()" href="javascript:;">></a>
+        </div>
+        <div class="month-navigation">
+            <select (change)="genCalendarView()" [(ngModel)]="month">
+                <option *ngFor="let m of months" value="{{m.value}}">{{m.label}}</option>
+            </select>
+
+            <select class="date-navigation" (change)="genCalendarView()" [(ngModel)]="year">
+                <option *ngFor="let y of years" value="{{y}}">{{y}}</option>
+            </select>
+        </div>
+
+    </div>
+
+    <table>
+        <tbody>
+            <tr>
+                <th *ngFor="let i of items">{{i}}</th>
+            </tr>
+            <tr *ngFor="let weekData of dateComposer">
+                <td (click)="onDateSelection(dayData.day)" *ngFor="let dayData of weekData['week']">
+                    <span>{{dayData.day}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
