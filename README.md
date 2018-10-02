@@ -1,6 +1,15 @@
 # Datepicker
 
-## How to use
+## Installation
+
+To install this library, run:
+
+```bash
+$ npm install sudatepicker --save
+```
+
+## Consuming your library
+
 ###### Add the below line in app.module.ts
 ```javascript
 
@@ -37,4 +46,15 @@ entryComponents: [SuPluginsDatepickerComponent]
 * @input - format (optional)
 * @output - OnDateSelection
 
+## LICENSE
+
+
 ###### It currently supports ngModel in the text input element and the support for reactiveform is pending still.
+
+
+## License
+
+MIT © [Sudhakar Pilavadi](mailto:sudhakarsp06@gmail.com)
+
+## Keywords
+Angular 6 Datepicker, Angular Datepicker, Angular 5 Datepicker
